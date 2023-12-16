@@ -21,7 +21,7 @@ The script will then double check that it is connected to the internet, and if s
 
 As long as the USB is successfully mounted during the execution of the code, _**a '.log' file will be copied back to the USB for more information**_ - such as reported errors or confirmed success. Otherwise, this log file will always be accessible on the device at **/usr/local/sbin**.
 
-# Text file format
+# USB Text File (autoWIFI.txt) format
 
 Make sure, in regards to the format of the text file on the USB, that:
   - You have named the file *exactly* "autoWIFI.txt"
