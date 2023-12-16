@@ -30,4 +30,4 @@ sudo udevadm control --reload-rules
 sudo udevadm trigger
 sudo systemctl daemon-reload
 
-echo -e "\t...Finished Script.\n"
+echo -e "\t...Finished installing autoWIFI.\n"
