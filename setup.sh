@@ -5,7 +5,7 @@ if [[ $EUID -ne 0 ]]; then
   exit 1
 fi
 
-echo -e "\nMoving files from src/ and changing permissions...\n(This script should be ran as root)\n"
+echo -e "\nMoving files from src/ and changing permissions...\n"
 
 sudo cp src/autoWIFI.sh /usr/local/sbin/
 sudo cp src/autoWIFIHelper@.service /etc/systemd/system/
