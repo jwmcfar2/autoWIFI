@@ -15,7 +15,7 @@ Setup is simple and can be done manually - there are only 3 single files needed:
 
 # Use
 
-Simply plugging in a USB that contains a *specifically formatted* (read further below) file called "autoWIFI.txt", will allow this script to parse it for the ssid and password provided and connect the first discovered wlan device to it (checks for any wifi cards, picks the first one, give is the info on this text file).
+Simply plugging in a USB that contains a *specifically formatted* (read further below) file called "autoWIFI.txt", will allow this script to parse it for the ssid and password provided and connect the first discovered wlan device to it (checks for any wifi cards, picks the first one, give it the info on this text file).
 
 The script will then double check that it is connected to the internet, and if so, delete the "autoWIFI.txt" file automatically (for sensitivity reasons).
 
