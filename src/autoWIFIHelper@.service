@@ -1,0 +1,12 @@
+[Unit]
+Description=autoWIFI helper service to allow ping/umount ops in script
+RequiresMountsFor=/dev/%i
+
+[Service]
+User=root
+Type=simple
+Environment="DEVNAME=/dev/%i"
+ExecStart=/usr/local/sbin/autoWIFI.sh $DEVNAME
+
+[Install]
+WantedBy=multi-user.target

@@ -30,4 +30,4 @@ Make sure, in regards to the format of the text file on the USB, that:
   >
   >pass: [Password]
 
-I have included an example "autoWIFI.txt" in **examples/**
+I have included an example "autoWIFI.txt" in **example/**
