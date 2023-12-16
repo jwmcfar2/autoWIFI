@@ -19,7 +19,7 @@ Simply plugging in a USB that contains a *specifically formatted* (read further 
 
 The script will then double check that it is connected to the internet, and if so, delete the "autoWIFI.txt" file automatically (for sensitivity reasons).
 
-As long as the USB is successfully mounted during the execution of the code, a '.log' file will be copied back to the USB for more information - such as reported errors or confirmed success. Otherwise, this log file will always be accessible on the device at **/usr/local/sbin**.
+As long as the USB is successfully mounted during the execution of the code, _**a '.log' file will be copied back to the USB for more information**_ - such as reported errors or confirmed success. Otherwise, this log file will always be accessible on the device at **/usr/local/sbin**.
 
 # Text file format
 
