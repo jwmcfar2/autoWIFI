@@ -26,8 +26,8 @@ As long as the USB is successfully mounted during the execution of the code, a '
 Make sure, in regards to the format of the text file on the USB, that:
   - You have named the file *exactly* "autoWIFI.txt"
   - The format of its contents matches this exactly (only 2 lines, no leading spaces, space after first tokens '**ssid:**' & '**pass:**'):
-  >"ssid: [WIFI Name]"
+  >ssid: [WIFI Name]
   >
-  >"pass: [Password]"
+  >pass: [Password]
 
 I have included an example "autoWIFI.txt" in examples/
