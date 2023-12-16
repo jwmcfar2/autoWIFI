@@ -4,7 +4,7 @@ Simple scripts/code for Linux system to allow a specifically formatted '.txt' fi
 
 # Setup
 
-You can simply just run my script in the root of this repo (sudo may be needed): ./setup.sh
+You can simply just run my script in the root of this repo (sudo may be needed): **./setup.sh**
 
 OR
 
