@@ -39,3 +39,19 @@ Make sure, in regards to the format of the text file on the USB, that:
   >pass: [Password]
 
 I have included an example "autoWIFI.txt" in **example/**
+
+# Uninstall
+
+I have added a simple uninstall script **uninstall.sh**, which will simply delete the files that I added via setup.sh (will prompt and warn you before it does, with exactly the commands it will run)
+
+OR
+
+If you have installed these files manually - best practice would be to delete them manually as well.
+
+Once removed, either restart the system or run the commands to restart udev / system services:
+
+>sudo udevadm control --reload-rules
+>
+>sudo udevadm trigger
+>
+>sudo systemctl daemon-reload

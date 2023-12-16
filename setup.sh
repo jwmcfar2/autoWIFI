@@ -1,6 +1,11 @@
 #!/bin/bash
 
-echo -e "\nMoving files from src/ and changing permissions (This script should be ran as root)..."
+if [[ $EUID -ne 0 ]]; then
+  echo -e "This script must be run as super-user/root (run 'sudo $(basename "$0")')"
+  exit 1
+fi
+
+echo -e "\nMoving files from src/ and changing permissions...\n(This script should be ran as root)\n"
 
 sudo cp src/autoWIFI.sh /usr/local/sbin/
 sudo cp src/autoWIFIHelper@.service /etc/systemd/system/
@@ -14,4 +19,4 @@ sudo udevadm control --reload-rules
 sudo udevadm trigger
 sudo systemctl daemon-reload
 
-echo "...Finished Script.\n"
+echo -e "\t...Finished Script.\n"
