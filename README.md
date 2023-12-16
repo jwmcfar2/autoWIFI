@@ -15,9 +15,11 @@ Setup is simple and can be done manually - there are only 3 single files needed:
 
 Then, be sure to restart udev / system services:
 
-sudo udevadm control --reload-rules
-sudo udevadm trigger
-sudo systemctl daemon-reload
+>sudo udevadm control --reload-rules
+>
+>sudo udevadm trigger
+>
+>sudo systemctl daemon-reload
 
 # Use
 
