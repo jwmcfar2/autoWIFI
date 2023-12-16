@@ -11,7 +11,7 @@ OR
 Setup is simple and can be done manually - there are only 3 single files needed:
   - The service file (`autoWIFIHelper@.service`), which allows for root commands (such as moving files and deleting wifi text file if this is successful) needs to be added to directory: /etc/systemd/system/
   - The udev rules file (`99-usb.rules`), which triggers an event every time a block device is detected for the first time (such as USB storage), which needs to go in directory: /etc/udev/
-  - The script itself (`autoWIFI.sh`), which is 99% of the functionality - you can put this anywhere, but you need to make sure it matches the directory listed in `autoWIFIHelper@.service`
+  - The script itself (`autoWIFI.sh`), which is 99% of the functionality - you can put this anywhere, but you need to make sure it matches the directory listed in `autoWIFIHelper@.service` -- I by default put this in /usr/local/sbin/
 
 # Use
 
