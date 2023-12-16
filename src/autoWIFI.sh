@@ -155,6 +155,8 @@ if [ -b "$DEVNAME" ]; then
                 sleep 0.5
 
                 echo -e "Successfully connected to: $ssid!" >> $logfile
+                echo -e "\nConnection Info:\n$(ifconfig $wlan_interface | head -n 4)" >> $logfile
+                echo -e "----------------------------------------------------------\n" >> $logfile
 
                 # As long as we are sure it is connected - delete the file
                 sudo rm $file_path
