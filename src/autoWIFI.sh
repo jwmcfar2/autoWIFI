@@ -5,7 +5,9 @@
 # (Deletes original .txt on success) _JMac
 
 ###########################################################
-# Log + Exit Fn (Called elsewhere in script)
+# Isolated Fns for this script (called elsewhere in here)
+###########################################################
+# Log + Exit Fn
 #
 # Syntax: loggedExit [Log String] [USB Mountpath]
 loggedExit() {
@@ -22,6 +24,19 @@ loggedExit() {
     fi
 
     exit
+}
+
+###########################
+# Single ping of google.com
+#
+# Syntax: pingConnection
+
+pingConnection() {
+    if ping -c 1 google.com &> /dev/null; then
+        return 0  # Connected to the internet
+    else
+        return 1  # Not connected to the internet
+    fi  
 }
 
 ###########################################################
@@ -80,9 +95,9 @@ if [ -b "$DEVNAME" ]; then
                 # Successfully mounted, now list contents
                 echo "Successfully mounted to: $mount_point" >> $logfile
 
-                ################################################################
+                ############################################################
                 # Check for file, if exists, then load its settings to WLAN
-                ################################################################
+                ############################################################
                 file_path="$mount_point/autoWIFI.txt"
 
                 # Check if the file exists -- don't log this, any USB (like for movies/shows) could be inserted 
@@ -121,7 +136,7 @@ if [ -b "$DEVNAME" ]; then
                 # Verify if it has connected to the internet -- CANT GET TO WORK FROM UDEV EVENT, GIVING UP
                 maxAttempts=30
                 while true; do
-                    if [[ $(bash /usr/local/sbin/singlePing.sh) == "true"  ]]; then
+                    if pingConnection; then
                         break
                     fi
                 
