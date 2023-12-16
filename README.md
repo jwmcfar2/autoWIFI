@@ -13,6 +13,12 @@ Setup is simple and can be done manually - there are only 3 single files needed:
   - The udev rules file (`99-usb.rules`), which triggers an event every time a block device is detected for the first time (such as USB storage), which needs to go in directory: **/etc/udev/**
   - The script itself (`autoWIFI.sh`), which is 99% of the functionality - you can put this anywhere, but you need to make sure it matches the directory listed in `autoWIFIHelper@.service` -- By default I put this in **/usr/local/sbin/**
 
+Then, be sure to restart udev / system services:
+
+sudo udevadm control --reload-rules
+sudo udevadm trigger
+sudo systemctl daemon-reload
+
 # Use
 
 Simply plugging in a USB that contains a *specifically formatted* (read further below) file called "autoWIFI.txt", will allow this script to parse it for the ssid and password provided and connect the first discovered wlan device to it (checks for any wifi cards, picks the first one, give it the info on this text file).
