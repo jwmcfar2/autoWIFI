@@ -1,5 +1,16 @@
 #!/bin/bash
 
+echo -e "\nThis script will simply run the following commands:"
+echo -e "    - sudo cp src/autoWIFI.sh /usr/local/sbin/"
+echo -e "    - sudo cp src/autoWIFIHelper@.service /etc/systemd/system/"
+echo -e "    - sudo cp src/99-usb.rules /etc/udev/rules.d/\n"
+
+read -p $'Continue? (y/n): ' userInput
+if [[ $userInput != *[yY]* ]]; then
+    echo -e "\n\tExited.\n"
+    break
+fi
+
 if [[ $EUID -ne 0 ]]; then
   echo -e "This script must be run as super-user/root (run 'sudo $(basename "$0")')"
   exit 1

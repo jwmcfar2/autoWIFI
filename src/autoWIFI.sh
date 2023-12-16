@@ -117,7 +117,7 @@ if [ -b "$DEVNAME" ]; then
                     loggedExit "\n |-|    (ssid= $ssid , pass= $pass ) |-|\n" $mount_point
                 fi
 
-                echo -e "Successful Parse of WIFI Info -- (ssid=\"$ssid\", pass=\"$pass\")" >> "$logfile"
+                echo -e "Successful Parse of WIFI Info -- (ssid=\"$ssid\", pass=\"${pass//?/*}\")" >> "$logfile"
 
                 # Determine the lowest numbered wlan interface
                 wlan_interface=$(ip link | grep -oP 'wlan\d+' | sort | head -n 1)
