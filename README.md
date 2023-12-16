@@ -27,6 +27,7 @@ Make sure, in regards to the format of the text file on the USB, that:
   - You have named the file *exactly* "autoWIFI.txt"
   - The format of its contents matches this exactly (pay attention to spaces):
   >ssid: [WIFI Name]
+
   >pass: [Password]
 
 I have included an example "autoWIFI.txt" in examples/
